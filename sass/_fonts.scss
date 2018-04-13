@@ -1,0 +1,289 @@
+#introduction p a:hover {
+  color:lighten($button-yellow, 15%);
+}
+
+.homepage #get-perkbox-free p a:hover, #footer.bg-white a:hover, #whats-included p a:hover {
+  color:lighten($button-blue, 15%);
+}
+
+#form-wrapper p#tac a:hover, #footer.bg-blue a:hover {
+  color:$button-yellow;
+}
+
+
+
+.homepage {
+	h2 {
+		font-size:rem(40);
+		color:$body-dark;
+		font-family: $primary-font;
+		margin-bottom:rem(15);
+		margin-top:0;
+    font-weight: normal;
+	}
+	#your-challenge p, #get-perkbox-free p {
+		font-size:rem(18);
+		color: $body-dark;
+		margin-bottom:rem(25);
+	}
+	#get-perkbox-free p a {
+		color:$brand-color;
+	}
+}
+
+.share, .success, .fail, .prize-lose, .educational, .prize-win {
+  h2 {
+    color: #ffffff;
+    font-family: $primary-font;
+    margin-bottom:rem(10);
+    text-transform: uppercase;
+    @include medium {
+    font-size:rem(40);
+    }
+    @include desktop {
+    font-size:rem(60);
+    margin-bottom:rem(30);
+    margin-top:rem(40);
+    line-height:rem(65);
+    }
+  }
+  #game-introduction p {
+    margin-top:rem(0);
+    @include medium {
+      margin-bottom:rem(20);
+    }
+    @include desktop {
+      margin-bottom:rem(40);
+    }
+  }
+
+  #form-wrapper p {
+    width:90%;
+    padding:0 5%;
+    font-size:rem(18);
+    color: #fff;
+    margin-top:rem(35);
+    margin-bottom:rem(40);
+    @include desktop {
+    font-size:rem(27);
+    width:100%;
+    padding:0%;
+    }
+  }
+
+  #form-wrapper #formError p {
+    font-size:1rem;
+    margin-top:0;
+    color:$black;
+    font-weight:bold;
+    margin-bottom:1.5rem;
+    @include medium {
+    font-size:1.5rem;
+    margin-top:0;
+    margin-bottom:2.5rem;
+    }
+  }
+
+  #lose-message {
+    font-size:rem(20);
+    font-family:$body-font;
+  }
+
+}
+
+#footer.bg-white a {
+  color: $button-blue; 
+  font-family: $primary-font;
+
+  text-decoration:none;
+  &:first-child {
+
+  }
+  &:last-child {
+    font-size:rem(15);
+    padding-bottom:rem(30);
+    text-decoration: underline;
+  }
+}
+
+#footer img {
+  padding:rem(20) rem(5) 0 rem(5);
+}
+
+#footer p {
+  font-size:rem(14);
+  margin:rem(20) 0;
+}
+
+#footer #mainLink {
+  font-size:rem(30);
+  margin-bottom:rem(8);
+  padding-top:rem(10);
+  font-weight:600;
+  display:inline-block;
+  width:100%;
+}
+
+#footer.bg-blue a {
+  color: #fff; 
+  font-family: $primary-font;
+  text-decoration:none;
+
+  &:last-child {
+    font-size:rem(15);
+    padding-bottom:rem(30);
+    text-decoration: underline;
+  }
+}
+
+#footer.bg-blue p {
+  color:$body-light;
+}
+
+#get-perks h3 {
+  color:#fff;
+  font-family:$primary-font;
+  @include medium {
+  font-size:rem(40);
+  }
+  span {
+    font-weight:bold;
+  }
+}
+
+//Misc
+
+a.button-yellow, input.button-yellow {
+  background-color: $button-yellow;
+  color:$black;
+  padding: rem(20) rem(55);
+  border-radius: rem(10);
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size:rem(29);
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  @include transition-duration(0.5s);
+  @include transition-property(background-color);
+  &:hover {
+  background-color:lighten($button-yellow, 15%);
+  }
+}
+
+a.button-blue {
+  background-color: $brand-color;
+  color:#fff;
+  text-decoration: none;
+  padding: rem(10) rem(55);
+  border-radius: rem(10);
+  text-transform: uppercase;
+  font-family: $primary-font;
+  font-size:rem(20);
+  display: inline-block;
+  cursor: pointer;
+  margin-bottom:rem(30);
+  text-align: center;
+  @include transition-duration(0.5s);
+  @include transition-property(background-color);
+  &:hover {
+  background-color:lighten($brand-color, 15%);
+  }
+}
+
+
+
+.bg-blue {
+  background-color: $brand-color;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-grey {
+  background-color: $grey;
+}
+
+pre {
+  text-align:left;
+  width:100%; 
+}
+
+.fail #or, .educational #or {
+  padding:rem(10) rem(0);
+  font-size:rem(30);
+  @include medium {
+  padding:0 rem(30);
+  font-size:rem(40);
+  }
+
+
+
+  color:#fff;
+  font-family:$primary-font;
+}
+
+#whats-included span, #your-team-will-love span {
+  color:$body-dark;
+  font-size:rem(30);
+  font-family:$primary-font;
+  margin-bottom:0;
+  @include medium {
+  font-size:rem(40);
+  }
+
+}
+
+
+#game-introduction  p#prize-lose-summary {
+      font-size: 1.25rem;
+      margin-top:0;
+}
+
+#game-introduction p#hr-form-intro {
+  margin-bottom:rem(40);
+  font-family:$body-font;
+  font-size:rem(20);
+}
+
+
+
+#find-out-more {
+margin-top:0;
+font-size:rem(18);
+  a {
+    color:$button-blue;
+  }
+}
+
+#join-others p{
+  color:$body-dark;
+  font-family:$primary-font;
+  @include medium {
+  font-size:rem(40);
+  margin-bottom:rem(40);
+  margin-top:rem(80);
+  }
+}
+
+#happy-team {
+  color:$body-dark;
+  font-family:$primary-font;
+  @include medium {
+  font-size:rem(40);
+  margin-bottom:rem(50);
+  margin-top:rem(50);
+  }
+}
+
+.prize-win #game-introduction p#find-out-more {
+  font-size:rem(20);
+}
+
+#game-introduction p#awesome-skills {
+margin-bottom:rem(20);
+@include medium {
+margin-bottom:rem(40);
+}
+}

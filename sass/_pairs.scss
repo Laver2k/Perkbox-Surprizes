@@ -1,0 +1,202 @@
+//CSS for the game page
+
+@mixin min-em($width) {
+
+	  $base: $em-base;
+	  @if not unitless($base) {
+	      $base: strip-units($base);
+	  }		
+	$new-width: $width / $base;
+	
+	@media screen and (min-width: $new-width + em ) {
+		@content;	
+	}
+}
+
+@mixin font-smoothing {
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+
+
+#game-wrapper {
+	max-width:$desktop-width;
+    margin: 0 auto rem(80) 0;
+	@include medium {
+	margin:0 auto;
+	}
+	#timer {
+		display: inline-block;
+		float:right;
+		width:100%;
+		@include medium {
+		width:17%;
+		float:right;
+		}
+	}
+	.game {
+		@include medium {
+		display: inline-block;
+		margin-left:18%;
+		float:left;
+		width:65%;
+		}
+	}
+
+}
+
+.game {
+	height: 75vh;
+	margin:0 auto;
+	position: relative;
+	padding:rem(10);
+	@include medium {
+	padding:0;
+	height: 100vh;
+	}
+	.timer {
+		position: absolute;
+		top: 1%;
+		left: 1%;
+		z-index: 1;
+		background: white;
+	}
+}
+
+.flip-container {
+	@include perspective(1000);
+	height: 23%;
+	margin: 1%;
+	cursor: pointer;
+}
+
+.flip-container.flip .flipper {
+	@include transform(rotateY(180deg));
+}
+
+.flip-container, .front, .back {
+	width: 23%;
+	float: left;
+	border-radius: 12px;
+}
+
+.flipper {
+	
+	@include transition(null 0.6s null);
+	@include transform-style(preserve-3d);
+	height: 100%;
+	position: relative;
+	
+	.front, .back {
+		@include backface-visibility(hidden);
+		-ms-backface-visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+	}
+	
+	.front {
+		@include transform(rotateY(0deg));
+		background: #1f6681 url("../img/cards/card-back.png") no-repeat center;
+		background-size: contain;
+	}
+	
+	.back {
+		@include transform(rotateY(180deg));
+		background: blue;
+		border: 1px solid #1f6681;
+	}
+}
+
+@each $card in champion, master-multitasker, office-dj, office-jester, sales-superstar, social-butterfly, team-hero, king-of-the-kettle {
+	##{$card} {
+		background: white url("../img/cards/card-" + $card + ".png") no-repeat center;
+		background-size: 50px;
+		@include smaller { 
+		background-size: inherit;
+		}
+	}
+}
+
+.pairs {
+  background-image:url('../img/pairs-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+#cloud-divider {
+	width:100%;
+	text-align:center;
+}
+
+#clock {
+    width: 57px;
+    height: 65px;
+ 	background-image:url('../img/clock.png');
+  	background-position: center top;
+  	background-repeat:no-repeat;
+  	margin: rem(0) auto rem(16) auto;
+  	background-size:cover;
+  	@include smaller {
+
+  	background-size:inherit;
+	width:120px;
+	height:130px;
+  	}
+  	@include medium {
+  	margin: rem(50) auto rem(16) auto;
+  	}
+  	.timer {
+  		font-size:rem(28);
+  		padding-top:rem(17);
+  		@include smaller {
+  		font-size:rem(38);
+  		padding-top:rem(42);
+  		}
+  		font-family:$primary-font;
+  		text-align: center;
+  	}
+}
+
+#game-introduction {
+
+  padding-top:rem(32);
+  padding-bottom:rem(8);
+  @include medium {
+  text-align:center;
+  }
+  @include desktop {
+  padding-top:rem(100);
+  padding-bottom:rem(0);
+  }
+
+  #logo {
+    margin-bottom: rem(20);
+    @include desktop {
+    margin-bottom: rem(25);
+    }
+  }
+
+  p {
+    font-family:$primary-font;
+    color:#fff;
+    font-size:rem(30);
+    display: inline-block;
+    width:100%;
+    font-size:rem(20);
+    margin-bottom:rem(8);
+    @include desktop {
+    margin-top:rem(45);
+    margin-bottom:rem(45);
+    font-size:rem(30);
+    }
+    a {
+      text-transform: uppercase;
+      color: $button-yellow;
+    }
+  }
+}

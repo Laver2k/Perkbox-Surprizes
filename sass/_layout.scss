@@ -1,0 +1,550 @@
+body, div, p, form, input {
+  font-family: $body-font;
+  color:$body-dark;
+  font-weight:300;
+}
+
+body {
+  background-color:#fff;
+}
+
+img {
+  max-width:100%;
+}
+
+#wrapper {
+  width:100%;
+  text-align: center;
+}
+
+.section {
+  width:100%;
+  display:inline-block;
+}
+
+.inner {
+  width:90%;
+  padding:0 5%;
+  text-align:center;
+  @include desktop {
+    width: $desktop-width;
+    margin:0 auto;
+    width:100%;
+    padding:0%;
+  }
+}
+
+.middle {
+  width:100%;
+  @include medium {
+    width: $medium-width;
+    margin:0 auto;
+  }
+}
+
+.half {
+  float:left;
+  text-align: center;
+  width:100%;
+  @include desktop {
+  width:50%;
+  text-align:left;
+  }
+}
+
+.third {
+  width:100%;
+  text-align: center;
+  @include medium {
+  width:calc(94%/3);
+  padding:0 1%;
+  display:inline-block;
+  float:left;
+  text-align: left;
+  }
+}
+
+.limit-width {
+  width: 90%;
+  padding: 0 5%;
+  max-width:$desktop-width;
+  margin: 0 auto;
+  @include desktop {
+    width:100%;
+    padding:0;
+  }
+}
+
+.prize-lose {
+  background-image:url('../img/pairs-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+.prize-win {
+  background-image:url('../img/pairs-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+.share {
+  background-image:url('../img/cards-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+.success {
+
+  background-repeat:no-repeat;
+  background-position: center top;
+  @include desktop {
+  background-image:url('../img/cards-bg.png');
+  }
+}
+
+.success #game-introduction {
+  @include desktop {
+    margin-bottom:rem(170);
+  }
+}
+
+.fail {
+  background-image:url('../img/pairs-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+.prize-win {
+  .bx-wrapper .bx-viewport {
+    background: $grey;
+  }
+  #slider {
+    padding-bottom:rem(30);
+    @include medium {
+    padding-bottom:rem(75);
+    }
+
+    #get-perkbox-button {
+      margin-top:rem(30);
+      @include medium {
+      margin-top:rem(50);
+      }
+    }
+
+    ul li {
+      div {
+      background-color: #fff;
+      font-family:$primary-font;
+      color:$body-dark;
+      height:rem(50);
+      font-size:rem(20);
+      @include smaller {
+      height:rem(60);
+      font-size:rem(18);
+      }
+      @include desktop {
+      height:rem(90);
+      font-size:rem(25);
+      }
+
+    }
+
+    }
+  }
+}
+
+.blue-highlight {
+  display:inline-block;
+  background-color:$brand-color;
+  width:em(30);
+  height:em(5);
+  margin-bottom:rem(33);
+  border-radius:5px;
+}
+
+.blue-divider {
+  display:inline-block;
+  background-color:$brand-color;
+  height:em(5);
+  margin-bottom:rem(30);
+  border-radius:5px;
+  width:100%;
+  margin-top:rem(20);
+  @include medium {
+  margin-top:rem(50);
+  width:$medium-width;
+  }
+}
+
+#plane.small-plane {
+  max-width:100%;
+  @include desktop {
+  max-width:$medium-slim;
+  }
+}
+
+.share #cloud-line {
+  display:none;
+  margin-top:rem(100);
+  @include desktop {
+    margin-top:rem(300);
+    display:inline-block;
+  }
+}
+
+#hundreds-more {
+  width:50%;
+  margin:rem(25) 0; 
+  @include medium {
+  width:auto;
+  margin:rem(25) 0;
+  }
+}
+
+  #perk-partners {
+    margin-top:rem(20);
+    margin-bottom:rem(0);
+    @include desktop{
+    margin-top:rem(0);
+    margin-bottom:rem(20);
+    }
+  }
+
+  #subtitle {
+    text-align:left;
+    margin:0 auto;
+    display:block;
+    @include medium {
+    width:rem(275);
+    }
+  }
+
+  .educational #subtitle {
+    text-align:left;
+    margin:rem(15) auto rem(30) auto;
+    display:block;
+    @include medium {
+    width:rem(340);
+    margin-top:rem(0);
+    margin-bottom:rem(30);
+    }
+  }
+
+  #whats-included {
+    padding-top:rem(25);
+    padding-bottom:rem(30);
+    margin-top:rem(0);
+    @include medium {
+    padding-top:rem(30);
+    padding-bottom:rem(30);
+    margin-top:rem(0);
+    }
+    p {
+    text-align:left;
+      @include medium {
+      text-align:center;
+      }
+    }
+  }
+
+  #balloons {
+    margin-top:rem(20);
+    position:relative;
+  }
+
+  #perk-partners {
+    img {
+      width:17%;
+      height:auto;
+      @include desktop {
+      padding-right:2%;
+      }
+    &:last-child {
+      @include desktop {
+      padding-right:rem(0);
+      }
+    }
+
+    }
+
+  }
+
+  #trust-badge {
+    margin-top:rem(15);
+  }
+
+  #form-wrapper p#tac, #form-wrapper p#tac a {
+    font-size:rem(14);
+    line-height:rem(20);
+    max-width:400px;
+    margin:rem(20) auto rem(5) auto;
+    color:#fff;
+    font-family:$body-font;
+    text-transform: none;
+  }
+
+  #whats-included .summary-row {
+    width:100%;
+
+    .perk-details {
+      width:97%;
+      padding-right:3%;
+      float:left;
+      text-align:left;
+      margin-bottom:rem(10);
+      @include medium {
+      width:22%;
+      padding-right:3%;
+      margin-bottom:rem(0);
+      }
+
+      p {
+      text-align:left;
+      }
+
+      .highlight-small {
+        width:rem(15);
+        height:rem(4);
+        border-radius:rem(5);
+        background-color: $button-blue;
+        display: block;
+      }
+    }
+
+    h3 {
+      margin-bottom:rem(10);
+      margin-top:rem(10);
+    }
+
+    p {
+      font-size:rem(15);
+    }
+  }
+
+  #whats-included .summary-row:last-child {
+    h3 {
+      @include medium {
+      min-height:rem(52);
+      }
+
+    }
+  }
+
+
+  #social img {
+    padding:0 rem(12);
+  }
+
+  #cloud-divider {
+    @include desktop {
+      margin-top:rem(300);
+    }
+  }
+
+  #game-introduction {
+    width:100%;
+    @include medium {
+    max-width:$medium-slim;
+    margin:0 auto;
+    }
+  }
+
+  .button-yellow {
+    padding-left:0;
+    padding-right:0;
+    margin:0 auto;
+  }
+
+  #fail-options .button-yellow {
+    width:rem(250);
+  }
+
+  #or {
+    width:100%;
+    padding:0;
+    font-size:rem(30);
+    color:#fff;
+    font-family:$primary-font;
+    display: inline-block;
+    @include medium {
+    padding:0 rem(30);
+    width:auto;
+    font-size:rem(40);
+    }
+
+  }
+
+  #fail-options {
+    margin-top:rem(20);
+    margin-bottom:rem(20);
+    @include medium {
+    margin-top:rem(0);
+    margin-bottom:rem(45);
+    }
+    a.button-yellow {
+      max-width:rem(240);
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+
+
+.educational {
+  background-image:url('../img/pairs-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+}
+
+.educational {
+
+
+  .bx-wrapper .bx-viewport {
+    background: $grey;
+  }
+
+  #slider {
+    padding-bottom:rem(30);
+    @include medium {
+    padding-bottom:rem(75);
+    }
+
+    #get-perkbox-button {
+      margin-top:rem(30);
+      @include medium {
+      margin-top:rem(50);
+      }
+    }
+
+    ul li {
+      div {
+      background-color: #fff;
+      font-family:$primary-font;
+      color:$body-dark;
+      height:rem(50);
+      font-size:rem(20);
+      @include smaller {
+      height:rem(60);
+      font-size:rem(18);
+      }
+      @include desktop {
+      height:rem(90);
+      font-size:rem(25);
+      }
+
+    }
+
+
+    }
+
+  }
+
+}
+
+
+  #hr-form-intro {
+    font-size:rem(20);
+  }
+
+
+
+  .highlight  {
+    width:rem(35);
+    height:rem(5);
+    border-radius:rem(5);
+    background-color: $button-blue;
+  }
+
+  .summary-row {
+    width:100%;
+    display:inline-block;
+      margin-bottom:rem(0);
+    @include medium {
+      margin-bottom:rem(15);
+    }
+  }
+
+  #summary-boxes {
+    width:100%;
+  }
+
+
+
+  #perk-intro {
+    margin-top:rem(20);
+    margin-bottom:rem(20);
+    @include desktop {
+    margin-top:rem(30);
+    margin-bottom:rem(30);  
+    }
+
+  }
+
+  #get-perkbox-button {
+    margin-top:rem(10);
+    margin-bottom:rem(10);
+  }
+
+  #get-perks h3 {
+    margin-top:0;
+  }
+
+  #qube-thanks {
+    padding:rem(20) 0 rem(20) 0;
+    @include medium {
+    padding:rem(20) 0 rem(60) 0;
+    }
+  }
+
+  #join-others {
+    padding-bottom:rem(20);
+    @include medium {
+    padding-bottom:rem(60);
+    }
+
+  }
+
+  #keep-winning {
+    margin-top:rem(20);
+    margin-bottom:rem(20);
+    @include medium {
+    margin-top:0;
+    margin-bottom:rem(20);
+    }
+  }
+
+  #game-introduction p#thanks-for-playing {
+    margin-bottom:rem(20);
+    @include medium {
+      margin-bottom: rem(32);
+    }
+  }
+
+  .social-icons {
+    margin-bottom:rem(30);
+  }
+
+
+a.button-blue:hover, a.button-yellow:hover, .button-yellow:hover, .button-blue:hover {
+  animation: shake 0.75s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

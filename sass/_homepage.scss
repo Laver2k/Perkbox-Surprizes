@@ -1,0 +1,193 @@
+//CSS for homepage
+
+#introduction {
+  background-image:url('../img/cloud-bg.png');
+  background-repeat:no-repeat;
+  background-position: center top;
+  padding-top:2rem;
+  padding-bottom:rem(30);
+  @include medium {
+  text-align:center;
+  }
+  @include desktop {
+  padding-top:rem(100);
+  padding-bottom:rem(60);
+  }
+
+  #logo {
+    margin-bottom: rem(20);
+    @include desktop {
+    margin-bottom: rem(25);
+    }
+  }
+
+  p {
+    font-family:$primary-font;
+    color:#fff;
+    font-size:rem(30);
+    display: inline-block;
+    width:100%;
+    font-size:rem(20);
+    @include desktop {
+    margin-top:rem(45);
+    margin-bottom:rem(45);
+    font-size:rem(30);
+    }
+    a {
+      text-transform: uppercase;
+      color: $button-yellow;
+    }
+  }
+}
+
+#benefits {
+  padding-top:rem(25);
+  padding-bottom:rem(25);
+  @include desktop {
+  padding-top:rem(30);
+  padding-bottom:rem(30);
+  }
+  .middle {
+  text-align: center;
+  }
+  .third {
+    p {
+      color: $body-dark;
+      font-family: $primary-font;
+      font-size: rem(25);
+      line-height:rem(25);
+      margin-top:0.75rem;
+      margin-bottom:1.5rem;
+      @include medium {
+      margin-bottom:0;
+      }
+    }
+  }
+  #many-more {
+    max-width: rem(300);
+    height:auto;
+    text-align:center;
+    margin-top:rem(0);
+    margin-bottom:rem(15);
+    width:100%;
+    @include medium {
+    width:auto;
+    margin-top:rem(35);
+    margin-bottom:rem(25);
+    }
+  }
+  .perk-wrapper {
+    width:80%;
+    padding:0 10%;
+  }
+}
+
+#slider {
+
+  #slider-wrapper {
+    margin: 0 auto;
+    @include medium {
+      width:100%;
+    }
+  }
+
+  .bx-wrapper .bx-viewport {
+    border:none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+  }
+  .bx-wrapper .bx-prev {
+    @include desktop {
+    left: -52px;
+    }
+  }
+  .bx-wrapper .bx-next {
+    @include desktop {
+    right: -40px;
+    }
+  }
+
+  #slider-wrapper-mobile {
+    margin:0 auto;
+    overflow:hidden;
+    visibility: hidden;
+    @include medium {
+      display:none;
+    }
+  }
+
+  #slider-wrapper-desktop {
+    display:none;
+    visibility: hidden;
+    @include medium {
+    display:block;
+    }
+  }
+
+  ul li {
+    @include medium {
+      width:100%;
+
+    }
+    div {
+    background-color:$button-blue;
+    margin:0;
+    color:#fff;
+    padding:rem(18) 0;
+    text-align:center;
+    display:inline-block;
+    width:100%;
+    height:rem(40);
+    font-size:rem(18);
+    @include medium {
+    font-size:rem(15);
+    }
+    @include desktop {
+    font-size:rem(18);
+    }
+
+    }
+  }
+}
+
+#get-perkbox-free {
+  img {
+    @include medium {
+      width:auto;
+      max-width:none;
+    }
+  }
+}
+
+#get-perkbox-free p{
+  margin-top:0; 
+}
+
+#your-challenge {
+  padding-top:rem(40);
+
+  p {
+    margin-top:0;
+  }
+
+  .button-yellow {
+    margin-top:rem(15);
+    margin-bottom:rem(30);
+    @include desktop {
+    margin-top:rem(65);
+    margin-bottom:0;
+    }
+  }
+
+  .half:nth-child(2) {
+    text-align: center;
+    @include desktop {
+    text-align: right;
+    }
+  }
+}
+
+
+           
+

@@ -1,0 +1,89 @@
+.text-fields {
+	width:100%;
+	display: inline-block;
+}
+	#form-wrapper {
+		width:100%;
+		display:block;
+		margin:0 auto;
+		@include medium {
+			width:100%;
+		}
+		.half:last-child {
+			@include desktop {
+			text-align:right;
+			}
+		}
+
+		input[type="text"] {
+			width:96%;
+			padding:1rem 2%;
+			font-size:rem(18);
+			margin-bottom:1rem;
+			border-radius: rem(10);
+			border:none;
+			@include medium {
+			width:84%;
+			padding:1rem 1.25rem;
+			margin-bottom:2rem;
+			}
+		}
+
+		select {
+			width:100%;
+			padding:1rem 0em;
+			margin-bottom:1rem;
+			border-radius: rem(10);
+			border:none;
+			font-size:rem(18);
+			height:3.25rem;
+			@include medium {
+			margin-bottom:2rem;
+			width:90%;
+			padding:1rem 0em;
+			}
+			@include desktop {
+			width:94%;
+			}
+		}
+
+		input[type="submit"] {
+			border:none;
+			@include desktop {
+			margin-top:0rem;
+			}
+		}
+
+		::-webkit-input-placeholder {
+		   color: #666565;
+		}
+
+		:-moz-placeholder { 
+		   color: #666565;  
+		}
+
+		::-moz-placeholder { 
+		   color: #666565;  
+		}
+
+		:-ms-input-placeholder {  
+		   color: #666565;  
+		}
+
+		select {
+			color: #666565;
+		}
+
+		option {
+			padding: 0 2rem;
+		}
+
+		#trustE-container {
+			width:100%;
+		}
+
+	}
+
+	#game-introduction p#prize {
+		font-size:rem(25);
+	}

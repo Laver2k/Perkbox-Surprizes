@@ -1,0 +1,39 @@
+$primary-font: 'Dosis', sans-serif;
+$body-font: 'Lato', sans-serif;
+
+$body-dark: #666565;
+$body-light: #fff;
+$brand-color: #00adee; 
+$black: #282828;
+$grey: #f1f1f1;
+$button-yellow: #fad600;
+$button-blue: #00adee;
+
+$small-width: rem(600);
+$medium-slim: rem(720);
+$medium-width: rem(770);
+$medium-plus-width: rem(1070);
+$desktop-width: rem(1200);
+
+@mixin smaller {
+  @media (min-width: #{$small-width}) {
+    @content;
+  }
+}
+@mixin medium-slim {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (min-width: #{$medium-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
